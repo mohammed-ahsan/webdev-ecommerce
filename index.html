@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <img class="logo" src=./images/Logo.png>
+    <div class="search-container">
+      <form action="/action_page.js">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        
+      </form>
+      <button class="open-button" onclick="openForm()">Login</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+      
+    </div> 
+    
+    
+  </div>
+  <div class="ctg-main">
+    <h1 class="ctg">Categories</h1>
+  <div class="ctg-btn"> 
+    <button class="btn-1">Lorem, ipsum.</button>
+    <button class="btn-2">Lorem, ipsum.</button>
+    <br>
+    <button class="btn-3">Lorem, ipsum.</button>
+    <button class="btn-4">Lorem, ipsum.</button>
+    <br>
+    <button class="btn-5">Lorem, ipsum.</button>
+    <button class="btn-6">Lorem, ipsum.</button>
+    <br>
+    
+  </div>
+  <h2 style="text-align: center; margin-top:150px;">
+    Our Services
+  </h2>
+</div>
+  <div class="content">
+  <div class="images">
+    
+  
+    <img class="img w3-animate-left" src="./images/banner1.jpg" style="width:100%">
+    <img class="img w3-animate-left" src="./images/banner2.jpg" style="width:100%">
+    <img class="img w3-animate-left" src="./images/banner3.jpg" style="width:100%">
+    
+  </div>
+  </div>
+
+  
+  
+  
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+  <script>
+  var myIndex = 0;
+  var indexValue = 0;
+      function slideShow(){
+        setTimeout(slideShow, 5000);
+        var x;
+        const img = document.getElementsByClassName("img");
+        for(x = 0; x < img.length; x++){
+          img[x].style.display = "none";
+        }
+        indexValue++;
+        if(indexValue > img.length){indexValue = 1}
+        img[indexValue -1].style.display = "block";
+      }
+      slideShow();
+
+
+
+  </script>
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+    
+     
+  </body>
+</html>
